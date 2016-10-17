@@ -30,11 +30,13 @@ QUnit.test("Here's a test that should always pass", function (assert) {
     assert.ok(1 <= "3", "1<3 - the first agrument is 'truthy', so we pass!");
 });
 
-QUnit.test('Testing getTotal function with several sets of inputs', function (assert) {
-    assert.ok(4>"2", 'Tested with three relatively small positive numbers');
-    assert.ok(4>"2", 'Tested with two negative numbers. Any arguments less than 1 will be set to 1.');
-	assert.ok(4>"2", 'Tested with two large positive numbers. Any arguments greater than 100 will be set to 100.');
-	assert.ok(4>"2", 'Passing in null correctly raises an Error');
-	assert.ok(4>"2", 'Passing in a string correctly raises an Error');
+QUnit.test('Testing calculateTotal function with several sets of inputs', function (assert) {
+    assert.ok(App.calculateTotal(7, 5), 35, 'Tested with three relatively small positive numbers');
+    assert.equal(App.calculateTotal(-2, -5), 1, 'Tested with two negative numbers. Any arguments less than 1 will be set to 1.');
+    assert.equal(App.calculateTotal(600, 700), 10000, 'Tested with two large positive numbers. Any arguments greater than 100 will be set to 100.');
+        //throws( block                                    [, expected ] [, message ] ) 
+    assert.throws(function () { App.calculateTotal(null); }, /The given argument is not a number/, 'Passing in null correctly raises an Error');
+        //throws( block                                    [, expected ] [, message ] ) 
+    assert.throws(function () { App.calculateTotal("Christine","Christine"); }, /The given argument is not a number/, 'Passing in a string correctly raises an Error');
 });
 

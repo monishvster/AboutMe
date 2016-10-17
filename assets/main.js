@@ -94,13 +94,13 @@ var App = {
 		let subscription = parseFloat($('#subs').html());
 		let copies = parseFloat($('#copies').html());
 		
-		let result = App.calculateTotal(subscription,copies,magazine);
+		let result = App.calculateTotal(subscription,copies);
 		
 		$('#total').html(result);
 		$(".displayText").css('display', 'inline-block');
 	},
 	
-	calculateTotal: function (givenSub, givenCopy, givenMagazine) {
+	calculateTotal: function (givenSub, givenCopy) {
     if (typeof givenSub !== 'number' || typeof givenCopy !== 'number') {
       throw Error('The given argument is not a number');
     }
