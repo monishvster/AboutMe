@@ -1,0 +1,18 @@
+{   "name": "A03",
+    "version": "0.0.1",
+    "description": "A03 Assignment",
+    "main": "gbapp.js",
+    "dependencies": {
+        "express": "latest",
+        "morgan": "latest",
+        "body-parser": "latest",
+        "ejs": "latest"
+    },
+    "author": "Monish Verma",
+    "homepage": "https://bitbucket.org/s528180/a03verma",
+    "repository": {
+        "type": "git",
+        "url": "https://bitbucket.org/s528180/a03verma"
+    },
+     "license": "Apache-2.0"
+}

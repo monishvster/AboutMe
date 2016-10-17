@@ -1,0 +1,99 @@
+<!Doctype html>
+<html lang="en">
+<head>
+<title>Monish Verma</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css">
+<link rel="stylesheet" type="text/css" href="main.css">
+</head>
+<body>
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">Maverick Monish</a>
+      
+    </div>
+	<div id="navbar" class="navbar-collapse collapse">
+				<ul class="nav navbar-nav">
+					<li><a href="index.html">About Me</a></li>
+					<li><a href="Emagazine.html">E-Magazine</a></li>
+					<li><a href="Contact.html">Contact</a></li>
+					<li><a href="Guestbook">GuestBook</a></li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<div class="container">
+<h2>E-Magazine</h2>
+<div class="text-xs-center">
+<!--<img src="science.gif" alt="Science Magazine"> -->
+<button type="button" value="sci" id="sci"><img src="science.gif" class="img-rounded" alt="Science Magazine" style="width: 200px; height: 300px;">$15</button>
+<button type="button" value="esp" id="esp"><img src="ESPN.jpg" class="img-rounded" alt="Science Magazine" style="width: 200px; height: 300px;">$10</button>
+<button type="button" value="fac" id="fac"><img src="Fashion.jpg" class="img-rounded" alt="Science Magazine" style="width: 200px; height: 300px;">$25</button>
+<button type="button" value="kid" id="kid"><img src="Kids.jpg" class="img-rounded" alt="Science Magazine" style="width: 200px; height: 300px;">$5</button>
+</div>
+</div>
+<br>
+<br>
+<div class="container">
+  <form>
+    <div class="form-group row">
+      <label for="exampleInputName2" class="col-sm-2 col-form-label">Name</label>
+      <div class="col-sm-5">
+        <input type="email" class="form-control" id="name" placeholder="Harry Potter">
+      </div>
+    </div>
+    <div class="form-group row">
+      <label for="inputEmail3" class="col-sm-2 col-form-label">Email</label>
+      <div class="col-sm-5">
+        <input type="email" class="form-control" id="email" placeholder="Email">
+      </div>
+    </div>
+    <div class="form-group row">
+    <label for="exampleSelect2" class="col-sm-2 col-form-label">Subscription Type</label>
+	 <div class="col-sm-5">
+    <select class="form-control form-control-sm" id="sub">
+		<option value="1">Monthly</option>
+		<option value="6">Half Yearly</option>
+		<option value="12">Yearly</option>
+    </select>
+	</div>
+  </div>
+    <div class="form-group row">
+      <label for="inputEmail3" class="col-sm-2 col-form-label">Number of Copies</label>
+      <div class="col-sm-5">
+        <input type="text" class="form-control" id="copy" placeholder="1">
+      </div>
+    </div>
+    <div class="form-group row">
+      <div class="offset-sm-2 col-sm-10">
+        <button onclick="App.launch()" type="button" class="btn btn-primary">Order Now</button>
+		
+		</div>
+	  
+
+    </div>
+	
+  </form>
+  <br>
+		<span class="displayText">Your subscription type : $</span><span id="subs" class ="displayText"></span><span id="magname" class="displayText"></span><br>
+<span class="displayText">Number of copies : </span><span id="copies" class ="displayText"></span><br>
+<span class="displayText">You have to pay : $</span><span id="total" class ="displayText"></span><br>
+<span class="displayText">Subscription details have been forwarded to your email : </span><span id="emailId" class ="displayText"></span><br>
+     
+</div>
+<footer id="end_line">
+<p>Thanks for visiting. All rights Reserved.</p>
+</footer>
+<script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="main.js"></script>
+</body>
+</html>
