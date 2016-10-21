@@ -50,6 +50,29 @@ app.post("/new-entry", function (request, response) {
   });
   response.redirect("/Guestbook");
 });
+// contact form for sending email
+app.post("/Contact",function(req,res){
+
+  var api_key = 'key-896e41732c6c78b100f997e76be7eb2a'; // API Key
+  var domain = 'sandboxe484afc21d1246e492544df8346585da.mailgun.org'; //Domain name
+  var mailgun = require('mailgun-js')({apiKey: api_key, domain: domain});
+   
+  var data = {
+    from: 'Mail Gun <postmaster@sandboxe484afc21d1246e492544df8346585da.mailgun.org>', // From email ID
+    to: 'monish.vster@gmail.com', // To email ID
+    subject: req.body.userName+"<"+req.body.email+">"+" Sent you a message", //Subject Line
+    html: "<b style='color:blue'>Message: </b>"+req.body.body //Subject Body
+  };
+   
+  mailgun.messages().send(data, function (error, body) {
+    console.log(body);
+    if(!error)
+      res.send("Mail Sent");
+    else
+      res.send("Mail not sent <br/>Error Message : "+error);
+  });
+
+});
 
 //404
 app.use(function (request, response) {
@@ -58,6 +81,6 @@ app.use(function (request, response) {
 
 // Listen for an application request on port 8081
 http.listen(8081, function () {
-  console.log('Guestbook app listening on http://127.0.0.1:8081/');
+  console.log('A03 app listening on http://127.0.0.1:8081/');
 });
 
