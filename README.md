@@ -1,2 +1,2 @@
-A03 Assignment
-This app includes Guestbook and Form submission functionalities.
+A sample about me website build using node.js, javascript, HTML and CSS3.
+Also the interface is responsive.
